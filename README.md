@@ -3,11 +3,11 @@ Repository for the jenkinslab given at ITHS Göteborg
 
 Krav för Godkänt (G)
 
-Checkout
-Build
-Test
-Post Test
-Run Robot and Post Test
+Checkout    
+Build   
+Test    
+Post Test   
+Run Robot and Post Test 
 
 Frågor
 Svara på följande frågor (max 1 sida)  
