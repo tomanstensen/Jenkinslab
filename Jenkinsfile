@@ -6,7 +6,8 @@ Pipeline {
         stage("Checkout") {
 
             steps {
-                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tomanstensen/Jenkinslab.git']])
+                checkout scm
+                Git(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tomanstensen/Jenkinslab.git']])
             }
         }
 
