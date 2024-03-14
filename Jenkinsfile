@@ -3,22 +3,34 @@ Pipeline {
 
     stages {
 
-        stage("checkout") {
+        stage("Checkout") {
 
             steps {
                 checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tomanstensen/Jenkinslab.git']])
             }
         }
 
-        stage("build") {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying..'
+            }
+        }
+
+         stage('Run Robotframe') {
 
         }
 
-        stage("test") {
-
-        }
-
-        stage("post test") {
+         stage('Post RobotTests') {
 
         }
     }
