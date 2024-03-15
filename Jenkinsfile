@@ -14,13 +14,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'testy!'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'deploy?'
+                dir('TrailRunner') {
+                    bat 'mvn test'
+                }
             }
         }
 
@@ -35,5 +31,12 @@ pipeline {
                 echo 'post robot apocalypse'
             }
         }
+
+        post {
+            always {
+                junit 'build/reports/**/*.xml'
+            }
+        }
+     
     }
 }
