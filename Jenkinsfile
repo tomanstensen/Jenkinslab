@@ -6,7 +6,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('C:\\Coding\\Jenkinslab\\jenkinslab\\TrailRunner') {
+                dir('TrailRunner') {
                     sh 'mvn compile'
                 }
             }
