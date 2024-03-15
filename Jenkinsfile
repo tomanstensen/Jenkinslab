@@ -6,14 +6,16 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                echo 'Build me up, buttercup!'
             }
         }
+
         stage('Test') {
             steps {
                 echo 'testy!'
             }
         }
+        
         stage('Deploy') {
             steps {
                 echo 'deploy?'
@@ -22,13 +24,13 @@ pipeline {
 
          stage('Run Robotframe') {
             steps {
-                echo 'run robot'
+                echo 'run Forrest, run!'
             }
         }
 
          stage('Post RobotTests') {
             steps {
-                echo 'post robot'
+                echo 'post robot apocalypse'
             }
         }
     }
