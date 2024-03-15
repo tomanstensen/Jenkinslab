@@ -34,7 +34,7 @@ pipeline {
     }
     post {
         always {
-            junit 'build/reports/**/*.xml'
+            junit 'TrailRunner/target/site/jacoco/*.xml'
         }
     }
 }
