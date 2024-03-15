@@ -4,23 +4,20 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-
-            steps {
-                echo 'checkout'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo 'build me'
+                dir('TrailRunner') {
+                    bat 'mvn compile'
+                }
             }
         }
+
         stage('Test') {
             steps {
-                echo 'testy'
+                echo 'testy!'
             }
         }
+
         stage('Deploy') {
             steps {
                 echo 'deploy?'
@@ -29,13 +26,13 @@ pipeline {
 
          stage('Run Robotframe') {
             steps {
-                echo 'run robot'
+                echo 'run Forrest, run!'
             }
         }
 
          stage('Post RobotTests') {
             steps {
-                echo 'post robot'
+                echo 'post robot apocalypse'
             }
         }
     }
