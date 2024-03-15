@@ -1,36 +1,43 @@
 Pipeline {
+    
     agent any
 
     stages {
 
-        stage("Checkout") {
+        stage('Checkout') {
 
             steps {
-                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tomanstensen/Jenkinslab.git']])
+                Git 'https://github.com/tomanstensen/Jenkinslab.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh "mvn compile"
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh "mvn test"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying..'
+                
             }
         }
 
          stage('Run Robotframe') {
+            steps {
+
+            }
 
         }
 
          stage('Post RobotTests') {
+            steps {
+
+            }
 
         }
     }
