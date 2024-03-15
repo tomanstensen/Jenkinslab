@@ -6,7 +6,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Build me up, buttercup!'
+                dir('C:\\Coding\\Jenkinslab\\jenkinslab\\TrailRunner') {
+                    sh 'mvn compile'
+                }
             }
         }
 
@@ -15,7 +17,7 @@ pipeline {
                 echo 'testy!'
             }
         }
-        
+
         stage('Deploy') {
             steps {
                 echo 'deploy?'
