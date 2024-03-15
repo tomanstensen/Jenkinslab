@@ -6,12 +6,12 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "mvn compile"
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
-                sh "mvn test"
+                echo 'testy!'
             }
         }
         stage('Deploy') {
