@@ -7,38 +7,36 @@ pipeline {
         stage('Checkout') {
 
             steps {
-                echo 'najs'
+                echo 'checkout'
             }
         }
 
         stage('Build') {
             steps {
-                sh "mvn compile"
+                echo 'build me'
             }
         }
         stage('Test') {
             steps {
-                sh "mvn test"
+                echo 'testy'
             }
         }
         stage('Deploy') {
             steps {
-                
+                echo 'deploy?'
             }
         }
 
          stage('Run Robotframe') {
             steps {
-
+                echo 'run robot'
             }
-
         }
 
          stage('Post RobotTests') {
             steps {
-
+                echo 'post robot'
             }
-
         }
     }
 }
