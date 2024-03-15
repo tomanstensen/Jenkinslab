@@ -20,12 +20,6 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                echo 'deploy?'
-            }
-        }
-
          stage('Run Robotframe') {
             steps {
                 echo 'run Forrest, run!'
@@ -37,5 +31,12 @@ pipeline {
                 echo 'post robot apocalypse'
             }
         }
+
+        post {
+            always {
+                junit 'build/reports/**/*.xml'
+            }
+        }
+     
     }
 }
