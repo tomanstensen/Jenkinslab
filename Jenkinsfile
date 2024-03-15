@@ -7,7 +7,7 @@ Pipeline {
         stage('Checkout') {
 
             steps {
-                Git 'https://github.com/tomanstensen/Jenkinslab.git'
+                echo 'najs'
             }
         }
 
