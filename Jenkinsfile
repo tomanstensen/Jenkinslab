@@ -4,13 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-
-            steps {
-                checkout scmGit(branches: [[name: '*/main'], [name: '*/b1']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tomanstensen/Jenkinslab.git']])
-            }
-        }
-
         stage('Build') {
             steps {
                 echo 'build me'
