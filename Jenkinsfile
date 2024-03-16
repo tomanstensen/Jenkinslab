@@ -23,7 +23,7 @@ pipeline {
          stage('Run Robotframe') {
             steps {
                 dir('Selenium/InfotivCarRentalTesting') {
-                    robot --tests.robot
+                    bat 'robot --nostatusrc tests.robot'
                 }
             }
         }
