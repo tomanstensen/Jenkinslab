@@ -22,13 +22,15 @@ pipeline {
 
          stage('Run Robotframe') {
             steps {
-                echo 'run Forrest, run!'
+                dir('Selenium/InfotivCarRentalTesting') {
+                    robot --tests.robot
+                }
             }
         }
 
          stage('Post RobotTests') {
             steps {
-                echo 'post robot apocalypse'
+                robot archiveDirName: 'robot-plugin', outputPath: 'Selenium/InfotivCarRentalTesting', overwriteXAxisLabel: ''
             }
         }
     }
