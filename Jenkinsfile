@@ -38,8 +38,5 @@ pipeline {
             junit '**/TrailRunner/target/site/jacoco/*.xml'
         }
 
-        failure {
-            mail to: tom.anstensen@iths.se, subject: 'The Pipeline failed :('
-        }
     }
 }
