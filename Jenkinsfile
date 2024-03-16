@@ -34,9 +34,9 @@ pipeline {
     }
     post {
 
-        always {
-            junit '**/TrailRunner/target/site/jacoco/*.xml'
-        }
+        // always {
+        //     junit '**/TrailRunner/target/site/jacoco/*.xml'
+        // }
 
     }
 }
