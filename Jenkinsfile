@@ -27,18 +27,13 @@ pipeline {
                 }
             }
         }
-
-         stage('Post RobotTests') {
-            steps {
-                robot archiveDirName: 'robot-plugin', outputPath: 'Selenium/InfotivCarRentalTesting', overwriteXAxisLabel: ''
-            }
-        }
     }
-    post {
 
-        // always {
-        //     junit '**/TrailRunner/target/site/jacoco/*.xml'
-        // }
+    // post {
 
-    }
+    //     always {
+    //         junit '**/TrailRunner/target/site/jacoco/*.xml'
+    //         robot archiveDirName: 'robot-plugin', outputPath: 'Selenium/InfotivCarRentalTesting', overwriteXAxisLabel: ''
+    //     }
+    // }
 }
