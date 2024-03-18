@@ -29,11 +29,15 @@ pipeline {
         }
     }
 
-    // post {
+    post {
 
-    //     always {
-    //         junit '**/TrailRunner/target/site/jacoco/*.xml'
-    //         robot archiveDirName: 'robot-plugin', outputPath: 'Selenium/InfotivCarRentalTesting', overwriteXAxisLabel: ''
-    //     }
-    // }
+        always {
+            jacoco execPattern: '**/TrialRunner/target/jacoco.exec'
+            junit stdioRetention: '', testResults: 'TrailRunner/target/site/jacoco/*.xml'
+        }
+
+        failure {
+            mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'Tests failed', to: 'tom.anstensen@iths.se'
+        }
+    }
 }
