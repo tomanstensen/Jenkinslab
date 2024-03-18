@@ -32,8 +32,8 @@ pipeline {
     post {
 
         always {
-            jacoco execPattern: '**/TrialRunner/target/jacoco.exec'
-            junit stdioRetention: '', testResults: 'TrailRunner/target/surefire-reports/*.xml'
+            jacoco execPattern: '**/TrialRunner/target/jacoco.exec', inclusionPattern: '**/*.class', sourcePattern: '**/TrialRunner/src/main/java/se/iths'
+            junit stdioRetention: '', testResults: '**/TrailRunner/target/surefire-reports/*.xml'
         }
 
     }
