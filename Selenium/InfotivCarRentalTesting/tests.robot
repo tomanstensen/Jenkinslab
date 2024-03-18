@@ -8,8 +8,8 @@ Resource    Resources.robot
 Infotiv car rental services
     [Documentation]    Testing the navigational flow of booking a car
     [Tags]    [Req 1][Req 2][Req 3][Req 4]
-    ${date1}=    Get Current Date     increment=1d
-    ${date2}=    Get Current Date     increment=2d
+    ${date1} =    Set Variable    03-28
+    ${date2} =     Set Variable    03-28
     
     Open webpage
     Log into account    ${user1}    ${passw1}
@@ -30,20 +30,24 @@ Cancel a booking
 Wrong start-date input
     [Documentation]    Giving the wrong input to booking start-date
     [Tags]    [Req 4][Req 5]
-    ${date1}=    Get Current Date     increment=-1d
-    ${date2}=    Get Current Date     increment=3d 
+    ${date1}=    Set Variable    03-13
+    ${date2}=    Set Variable    03-28
     Open webpage
     Log into account    ${user1}    ${passw1}
     Select trip-dates    ${date1}    ${date2}
+    Log out and exit browser
+
 
 Wrong end-date input
     [Documentation]    Giving the wrong input to booking end-date
     [Tags]    [Req 4][Req 5]
-    ${date1}=    Get Current Date     increment=1d
-    ${date2}=    Get Current Date     increment=-3d
+    ${date1}=    Set Variable    03-28
+    ${date2}=    Set Variable    05-28
     Open webpage
     Log into account    ${user1}    ${passw1}
     Select trip-dates    ${date1}    ${date2}
+    Log out and exit browser
+
 
 Booking car using Gherkin-syntax
     [Documentation]    Full flow of booking a car using the Gherkin-syntax
@@ -53,3 +57,11 @@ Booking car using Gherkin-syntax
     And User inputs its credit card information
     Then Selected car is booked
     And User logs out
+
+Cancel a booking again
+    [Documentation]     Removing a booked car from 'My page'
+    [Tags]    [Req 2][Req 3][Req 4]
+    Open webpage
+    Log into account    ${user1}    ${passw1}
+    Cancel a car
+    Log out and exit browser

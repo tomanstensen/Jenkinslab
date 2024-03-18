@@ -22,21 +22,18 @@ pipeline {
 
          stage('Run Robotframe') {
             steps {
-                echo 'run Forrest, run!'
+                dir('Selenium/InfotivCarRentalTesting') {
+                    bat 'robot --nostatusrc tests.robot'
+                }
             }
         }
-
-         stage('Post RobotTests') {
-            steps {
-                echo 'post robot apocalypse'
-            }
-        }
-
-        post {
-            always {
-                junit 'build/reports/**/*.xml'
-            }
-        }
-     
     }
+
+    // post {
+
+    //     always {
+    //         junit '**/TrailRunner/target/site/jacoco/*.xml'
+    //         robot archiveDirName: 'robot-plugin', outputPath: 'Selenium/InfotivCarRentalTesting', overwriteXAxisLabel: ''
+    //     }
+    // }
 }
