@@ -33,11 +33,8 @@ pipeline {
 
         always {
             jacoco execPattern: '**/TrialRunner/target/jacoco.exec'
-            junit stdioRetention: '', testResults: 'TrailRunner/target/site/jacoco/*.xml'
+            junit stdioRetention: '', testResults: 'TrailRunner/target/surefire-reports/*.xml'
         }
 
-        failure {
-            mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'Tests failed', to: 'tom.anstensen@iths.se'
-        }
     }
 }
