@@ -74,8 +74,8 @@ User is logged in to car booking page
 
 User selects booking dates and car-model
     [Tags]    VG_test
-    ${date1}=    Get Current Date     increment=1d
-    ${date2}=    Get Current Date     increment=2d
+    ${date1}=    Set Variable    03-28
+    ${date2}=    Set Variable    03-28
     Input Text    start    ${date1}  
     Input Text    end    ${date2}
     Click Button    continue
