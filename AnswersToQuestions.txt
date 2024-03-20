@@ -1,0 +1,16 @@
+Svara på följande frågor (max 1 sida) 
+
+• Förklara syftet med Continuous Testing och hur det används under labben.
+Syftet med Continuous Testing är att 
+
+• Hur kopplar automatiserad testning ihop med den bredare test- och utvecklingsprocessen, och kan du ge ett exempel från labben som illustrerar detta?  
+
+
+• Vilken del i din Pipeline tycker du ger störst vinst i att köra via Jenkins?   
+
+
+• Vad hade du velat lära dig mer eller förstå bättre kopplat till Jenkins?  
+
+
+• Vad var svårast med labben? 
+
