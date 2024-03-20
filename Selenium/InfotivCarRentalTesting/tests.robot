@@ -5,7 +5,7 @@ Library    OperatingSystem
 Resource    Resources.robot
 
 *** Test Cases ***
-Infotiv car rental services added name
+Infotiv car rental services
     [Documentation]    Testing the navigational flow of booking a car
     [Tags]    [Req 1][Req 2][Req 3][Req 4]
     ${date1} =    Set Variable    03-28
