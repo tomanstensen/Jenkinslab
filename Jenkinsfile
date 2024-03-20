@@ -42,7 +42,7 @@ pipeline {
         always {
 
             //    jacoco classPattern: '**/TrialRunner/target/classes/se/iths', execPattern: '**/TrialRunner/target/*.exec', sourcePattern: '**/TrialRunner/src/main/java/se/iths'
-            }
+            
             junit stdioRetention: '', testResults: '**/TrailRunner/target/surefire-reports/*.xml'
             robot archiveDirName: 'robot-plugin', outputPath: 'Selenium/InfotivCarRentalTesting', overwriteXAxisLabel: '', passThreshold: 70.0, unstableThreshold: 85.0 
         }
