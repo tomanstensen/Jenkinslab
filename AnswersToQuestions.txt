@@ -1,16 +1,29 @@
 Svara på följande frågor (max 1 sida) 
 
 • Förklara syftet med Continuous Testing och hur det används under labben.
-Syftet med Continuous Testing är att 
+Syftet med Continuous Testing är att genom att testa produkten ofta och tidigt så håller man uppe kvaliteten på produkten under en utvecklingsprocess.
+det ger också tidigt information om delar av produkten som inte fungerar som det är tänkt och kan hjälpa ett team att hålla sig till och uppnå acceptanskrav.
+När testningen görs tidigt så är det lättare att hitta små misstag eller fel i koden istället för att man skall leta efter dom senare i processen och slösa massa tid på det.
+Under denna labben så har jag efter varje ändring eller iteration, gjort en commit för att sedan testa att önskat resultat blev uppnåt.
+Under tidigae labbar så har det hjälpt mig att se vilka delar av en upgift som är avklarade så jag har kunant gå vidare och bli färdig med projektet med önskvärt resultat.
 
 • Hur kopplar automatiserad testning ihop med den bredare test- och utvecklingsprocessen, och kan du ge ett exempel från labben som illustrerar detta?  
-
+Det hjälper ett team att få kontroll på sin produkt och om den fortfarande fungerar. Att skriva automatiserade tester som körs när det sker en ändring av någon som inte är testare gör att
+det snabbt syns om det är en bra eller mindre bra ändring som har gjorts. Automatiserade tester gör också att det minskar vänte-tiden mellan olika delar av ett team.
+En kodare behöver inte vänta på att någon skall testa deras kod utan det sker med en gång och sparar teamet på så vis tid mellan olika processer.
+I denna labben så behövde jag göra lite ändringar i mina testfall för att dom skulle kunna köras flera gånger på rad. Det gick mycket snabbare och lättare för mig att se att dessa ändringar
+hade önskad effekt när det skedde automatiskt varje gång jag gjorde en ändring.
 
 • Vilken del i din Pipeline tycker du ger störst vinst i att köra via Jenkins?   
+Post stage. Där samlas alla resultat från mina tester och ger mig en snabb överblick över vad som har hänt under körningen.
+Självklart är dom tidigare stegen viktiga för utan dom finns ingen rapport men hade det varit en längre pipeline med mer omfattande testning så hade jag behövt ett post stage för att
+kunan analysera testerna snabbt och smidigt.
 
+• Vad hade du velat lära dig mer eller förstå bättre kopplat till Jenkins? 
+Hur det fungerar med en fungerande gemensam server. Trist att det inte fungerade.
 
-• Vad hade du velat lära dig mer eller förstå bättre kopplat till Jenkins?  
-
-
-• Vad var svårast med labben? 
+• Vad var svårast med labben?
+Att lösa vad det var som efterfrågades i min pipeline,
+och att gå igenom dokumentationen för jenkins för att förstå hur saker skulle köras.
+Post stage var svårast att lösa rent tekniskt.
 
