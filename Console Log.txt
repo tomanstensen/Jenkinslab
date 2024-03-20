@@ -1,0 +1,222 @@
+Started by user admin
+Checking out git https://github.com/tomanstensen/Jenkinslab.git into C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen@script\da3dcc2f14ecbd1a34cc94fbfb595795237642c1744dafeba9db4a4b27fec12f to read Jenkinsfile
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen@script\da3dcc2f14ecbd1a34cc94fbfb595795237642c1744dafeba9db4a4b27fec12f\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/tomanstensen/Jenkinslab.git # timeout=10
+Fetching upstream changes from https://github.com/tomanstensen/Jenkinslab.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.42.0.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/tomanstensen/Jenkinslab.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision d09c54c7591ffabb2695c3ff31bd0f68a49676dd (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f d09c54c7591ffabb2695c3ff31bd0f68a49676dd # timeout=10
+Commit message: "Merge pull request #17 from tomanstensen/b1"
+First time build. Skipping changelog.
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/tomanstensen/Jenkinslab.git # timeout=10
+Fetching upstream changes from https://github.com/tomanstensen/Jenkinslab.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.42.0.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/tomanstensen/Jenkinslab.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision d09c54c7591ffabb2695c3ff31bd0f68a49676dd (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f d09c54c7591ffabb2695c3ff31bd0f68a49676dd # timeout=10
+Commit message: "Merge pull request #17 from tomanstensen/b1"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] dir
+Running in C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner
+[Pipeline] {
+[Pipeline] bat
+
+C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner>mvn compile 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< se.iths:trailrunner >-------------------------
+[INFO] Building trailrunner 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (prepare-agent) @ trailrunner ---
+[INFO] argLine set to "-javaagent:C:\\Users\\tomca\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Users\\tomca\\.jenkins\\workspace\\Jenkinslab Tom Anstensen\\TrailRunner\\target\\jacoco.exec"
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ trailrunner ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ trailrunner ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.924 s
+[INFO] Finished at: 2024-03-20T10:02:27+01:00
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] dir
+Running in C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner
+[Pipeline] {
+[Pipeline] bat
+
+C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner>mvn test 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< se.iths:trailrunner >-------------------------
+[INFO] Building trailrunner 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (prepare-agent) @ trailrunner ---
+[INFO] argLine set to "-javaagent:C:\\Users\\tomca\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Users\\tomca\\.jenkins\\workspace\\Jenkinslab Tom Anstensen\\TrailRunner\\target\\jacoco.exec"
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ trailrunner ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ trailrunner ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ trailrunner ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ trailrunner ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ trailrunner ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running se.iths.ActivityManagerTest
+WARNING: A Java agent has been loaded dynamically (C:\Users\tomca\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.10\byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.688 s -- in se.iths.ActivityManagerTest
+[INFO] Running se.iths.ActivityTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s -- in se.iths.ActivityTest
+[INFO] Running se.iths.UserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in se.iths.UserTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.11:report (report) @ trailrunner ---
+[INFO] Loading execution data file C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\TrailRunner\target\jacoco.exec
+[INFO] Analyzed bundle 'trailrunner' with 4 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.955 s
+[INFO] Finished at: 2024-03-20T10:02:34+01:00
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Robotframe)
+[Pipeline] dir
+Running in C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\Selenium\InfotivCarRentalTesting
+[Pipeline] {
+[Pipeline] bat
+
+C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\Selenium\InfotivCarRentalTesting>robot --nostatusrc tests.robot 
+==============================================================================
+Tests :: A testsuite for the Lab 2, testing the Infotiv Car Rental services...
+==============================================================================
+Infotiv car rental services :: Testing the navigational flow of bo... | PASS |
+------------------------------------------------------------------------------
+Cancel a booking :: Removing a booked car from 'My page'              | PASS |
+------------------------------------------------------------------------------
+Wrong start-date input :: Giving the wrong input to booking start-... | PASS |
+------------------------------------------------------------------------------
+Wrong end-date input :: Giving the wrong input to booking end-date    | PASS |
+------------------------------------------------------------------------------
+Booking car using Gherkin-syntax :: Full flow of booking a car usi... | PASS |
+------------------------------------------------------------------------------
+Cancel a booking again :: Removing a booked car from 'My page'        | PASS |
+------------------------------------------------------------------------------
+Tests :: A testsuite for the Lab 2, testing the Infotiv Car Rental... | PASS |
+6 tests, 6 passed, 0 failed
+==============================================================================
+Output:  C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\Selenium\InfotivCarRentalTesting\output.xml
+Log:     C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\Selenium\InfotivCarRentalTesting\log.html
+Report:  C:\Users\tomca\.jenkins\workspace\Jenkinslab Tom Anstensen\Selenium\InfotivCarRentalTesting\report.html
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] jacoco
+[JaCoCo plugin] Collecting JaCoCo coverage data...
+[JaCoCo plugin] Version: 3.3.5
+[JaCoCo plugin] **/TrialRunner/target/jacoco.exec;**/Trialrunner/target/classes/se/iths;**/TrialRunner/src/main/java/se/iths; locations are configured
+[JaCoCo plugin] Number of found exec files for pattern **/TrialRunner/target/jacoco.exec: 0
+[JaCoCo plugin] Saving matched execfiles:  
+[JaCoCo plugin] Saving matched class directories for class-pattern: **/Trialrunner/target/classes/se/iths: 
+[JaCoCo plugin] Saving matched source directories for source-pattern: **/TrialRunner/src/main/java/se/iths: 
+[JaCoCo plugin] Source Inclusions: **/*.java,**/*.groovy,**/*.kt,**/*.kts
+[JaCoCo plugin] Source Exclusions: 
+[JaCoCo plugin] Loading inclusions files..
+[JaCoCo plugin] inclusions: []
+[JaCoCo plugin] exclusions: []
+[JaCoCo plugin] Thresholds: JacocoHealthReportThresholds [minClass=0, maxClass=0, minMethod=0, maxMethod=0, minLine=0, maxLine=0, minBranch=0, maxBranch=0, minInstruction=0, maxInstruction=0, minComplexity=0, maxComplexity=0]
+[JaCoCo plugin] Publishing the results..
+[JaCoCo plugin] Loading packages..
+[JaCoCo plugin] Done.
+[JaCoCo plugin] Overall coverage: class: 100.0, method: 100.0, line: 100.0, branch: 100.0, instruction: 100.0, complexity: 100.0
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] robot
+Robot results publisher started...
+INFO: Checking test criticality is deprecated and will be dropped in a future release!
+-Parsing output xml:
+Done!
+-Copying log files to build dir:
+Done!
+-Assigning results to build:
+Done!
+-Checking thresholds:
+Done!
+Done publishing Robot results.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
