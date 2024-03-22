@@ -11,7 +11,8 @@ ${passw1}    IAmUser#6
 ${creditcard}    1234123412341234
 ${cardholder}    Tom Anstensen
 ${cvc}    123
-
+${user2}    to.manstensen@iths.se
+${passw2}    AmIuser#6
 
 *** Keywords ***
 Open webpage
