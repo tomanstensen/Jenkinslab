@@ -65,3 +65,11 @@ Cancel a booking again
     Log into account    ${user1}    ${passw1}
     Cancel a car
     Log out and exit browser
+
+Enter wrong credentials when trying to log in
+    Open webpage
+    Log into account    ${user2}    ${passw2}
+    Choose car and press book
+    Confirm booking
+    Check booking details
+    Log out and exit browser    
